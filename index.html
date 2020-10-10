@@ -1,11 +1,53 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
-    <title>Launch site</title>
+    <title>Dice Roll</title>
+    <link rel="stylesheet" type="text/css" href="dice.css">
 </head>
-<body>
-    <h1>This is my landing page</h1>
-    <p><a href="file:///C:/Users/MrTony.Tony/Desktop/Web%20work/coding/Getting-to-know-me-jcs/know-me.html">Getting to know me</a></p>
-    <p><a href="file:///C:/Users/MrTony.Tony/Desktop/Web%20work/coding/Hobby/my-favorite-hobby.htm">My favorite Hobby</a></p>
+<body onload="dieRoll()">
+<div>
+<h1>Welcome to Yahtzee!</h1>
+<p>The dice will automatically roll as soon as you load the page</p>
+<p>You can also click each button or press enter to roll all of them</p>
+    <p>Click the button to roll the dice</p>
+    <button onclick="dieRoll()" autofocus>Roll Dice</button>
+    <p id="Dice"></p>
+
+    <p>Click the button to roll the dice</p>
+    <button onclick="dieRoll()">Roll Dice</button>
+    <p id="Dice2"></p>
+
+    <p>Click the button to roll the dice</p>
+    <button onclick="dieRoll()">Roll Dice</button>
+    <p id="Dice3"></p>
+
+    <p>Click the button to roll the dice</p>
+    <button onclick="dieRoll()">Roll Dice</button>
+    <p id="Dice4"></p>
+
+    <p>Click the button to roll the dice</p>
+    <button onclick="dieRoll()">Roll Dice</button>
+    <p id="Dice5"></p>
+
+
+<script>
+    function dieRoll() {
+        var x = Math.floor((Math.random() * 6) + 1);
+        document.getElementById("Dice").innerHTML = "You rolled " + x;
+    
+        var y = Math.floor((Math.random() * 6) + 1);
+        document.getElementById("Dice2").innerHTML = "You rolled " + y;
+        
+        var z = Math.floor((Math.random() * 6) + 1);
+        document.getElementById("Dice3").innerHTML ="You rolled " + z;
+
+        var a = Math.floor((Math.random() * 6) + 1);
+        document.getElementById("Dice4").innerHTML ="You rolled " + a;
+        var b = Math.floor((Math.random() * 6) + 1);
+        document.getElementById("Dice5").innerHTML ="You rolled " + b;
+         
+    }
+</script>
+</div>
 </body>
 </html>
